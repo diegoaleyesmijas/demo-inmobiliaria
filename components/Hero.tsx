@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -7,11 +8,13 @@ export default function Hero() {
     <section id="inicio" className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1920&q=80')",
-          }}
+        <Image
+          src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1920&q=75"
+          alt="Departamento luminoso en Buenos Aires preparado para alquiler temporario"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary-900/70 via-primary-900/50 to-primary-900/80" />
         {/* Radial gradient accents */}
@@ -20,7 +23,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 pt-32 pb-20">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-16 sm:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,7 +46,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="font-heading text-5xl md:text-7xl lg:text-[5.5rem] text-white leading-[1.05] mb-8 text-balance"
+            className="font-heading text-[2.4rem] sm:text-5xl md:text-7xl lg:text-[5.25rem] text-white leading-[1.08] mb-6 sm:mb-8 text-balance"
           >
             Gestión profesional de{" "}
             <span className="italic text-accent-400">alquileres temporarios</span>{" "}
@@ -65,7 +68,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center mb-12 sm:mb-20"
           >
             <a
               href="#calculadora"

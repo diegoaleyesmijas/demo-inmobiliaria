@@ -59,8 +59,8 @@ const cardVariants = {
 
 export default function Services() {
   return (
-    <section id="servicios" className="py-32 md:py-40 bg-white relative">
-      <div className="container mx-auto px-6">
+    <section id="servicios" className="py-20 md:py-32 lg:py-40 bg-white relative">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export default function Services() {
           <span className="inline-block px-3 py-1 rounded-full bg-accent-500/10 text-accent-600 text-[10px] font-medium uppercase tracking-[0.2em] mb-6">
             Servicios
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-900 mb-6 leading-[1.1] text-balance">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-900 mb-6 leading-[1.1] text-balance">
             Solución integral para{" "}
             <span className="italic text-accent-500">tu propiedad</span>
           </h2>

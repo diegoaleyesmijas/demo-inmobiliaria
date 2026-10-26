@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer id="contacto" className="bg-neutral-900 text-white pt-24 pb-10 relative overflow-hidden">
+    <footer id="contacto" className="bg-neutral-900 text-white pt-16 sm:pt-24 pb-24 sm:pb-10 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-0 left-1/3 w-[600px] h-[300px] bg-primary-500/[0.05] rounded-full blur-[100px]" />
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
           {/* Brand */}
           <div className="lg:col-span-2">

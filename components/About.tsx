@@ -1,14 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="py-32 md:py-40 bg-neutral-50 relative overflow-hidden">
+    <section className="py-20 md:py-32 lg:py-40 bg-neutral-50 relative overflow-hidden">
       {/* Subtle background accent */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary-500/[0.03] rounded-full blur-[80px]" />
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -19,7 +20,7 @@ export default function About() {
           <span className="inline-block px-3 py-1 rounded-full bg-primary-500/10 text-primary-600 text-[10px] font-medium uppercase tracking-[0.2em] mb-6">
             Quiénes somos
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-900 mb-6 leading-[1.1] text-balance">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-900 mb-6 leading-[1.1] text-balance">
             El puente entre propietarios y{" "}
             <span className="italic text-accent-500">huéspedes exigentes</span>
           </h2>
@@ -40,11 +41,13 @@ export default function About() {
           >
             <div className="bezel-outer">
               <div className="bezel-inner overflow-hidden">
-                <div className="aspect-[4/5]">
-                  <img
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
-                    alt="Propiedad gestionada por Hosty en Buenos Aires"
-                    className="w-full h-full object-cover"
+                <div className="relative aspect-[4/5]">
+                  <Image
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=75"
+                    alt="Living de una propiedad gestionada por Hosty en Buenos Aires"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -55,7 +58,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="absolute -bottom-6 -right-4 md:-right-6 bg-white rounded-2xl shadow-xl shadow-primary-500/10 p-5 border border-neutral-100"
+              className="absolute bottom-3 left-3 sm:-bottom-6 sm:-right-6 sm:left-auto bg-white rounded-2xl shadow-xl shadow-primary-500/10 p-4 sm:p-5 border border-neutral-100"
             >
               <div className="font-heading text-4xl text-accent-500 mb-1">+50</div>
               <div className="font-sans text-sm text-neutral-500">Propiedades activas</div>

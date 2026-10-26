@@ -30,11 +30,11 @@ export default function Header() {
         transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
         className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
           isScrolled
-            ? "top-6 w-[95%] max-w-5xl"
-            : "top-6 w-[95%] max-w-5xl"
+            ? "top-3 sm:top-6 w-[calc(100%-1.5rem)] sm:w-[95%] max-w-5xl"
+            : "top-3 sm:top-6 w-[calc(100%-1.5rem)] sm:w-[95%] max-w-5xl"
         }`}
       >
-        <div className={`flex items-center justify-between px-6 py-4 rounded-full transition-all duration-500 ${
+        <div className={`flex items-center justify-between px-3 sm:px-6 py-3 sm:py-4 rounded-full transition-all duration-500 ${
           isScrolled
             ? "bg-white/80 backdrop-blur-xl shadow-[0_2px_20px_rgba(15,76,117,0.08)] border border-white/60"
             : "bg-white/10 backdrop-blur-md border border-white/20"

@@ -5,11 +5,11 @@ import { pricingPlans } from "@/data/mockData";
 
 export default function Pricing() {
   return (
-    <section id="precios" className="py-32 md:py-40 bg-neutral-50 relative overflow-hidden">
+    <section id="precios" className="py-20 md:py-32 lg:py-40 bg-neutral-50 relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary-500/[0.02] rounded-full blur-[100px]" />
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ export default function Pricing() {
           <span className="inline-block px-3 py-1 rounded-full bg-primary-500/10 text-primary-600 text-[10px] font-medium uppercase tracking-[0.2em] mb-6">
             Precios
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-900 mb-6 leading-[1.1] text-balance">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-900 mb-6 leading-[1.1] text-balance">
             Planes{" "}
             <span className="italic text-accent-500">transparentes</span>
           </h2>
@@ -39,7 +39,7 @@ export default function Pricing() {
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.32, 0.72, 0, 1] }}
               className={`relative rounded-3xl p-8 md:p-10 transition-all duration-500 ${
                 plan.recommended
-                  ? "bg-primary-900 text-white lg:scale-105 lg:-my-4 shadow-2xl shadow-primary-900/20"
+                  ? "bg-primary-900 text-white lg:scale-[1.03] shadow-2xl shadow-primary-900/20"
                   : "bg-white text-primary-900 hover:shadow-lg hover:shadow-primary-500/5 border border-neutral-100"
               }`}
             >
@@ -54,7 +54,7 @@ export default function Pricing() {
                   {plan.name}
                 </h3>
                 <div className="flex items-baseline gap-1">
-                  <span className={`font-heading text-5xl ${plan.recommended ? "text-white" : "text-primary-900"}`}>
+                  <span className={`font-heading text-4xl sm:text-5xl ${plan.recommended ? "text-white" : "text-primary-900"}`}>
                     ${plan.price}
                   </span>
                   <span className={`font-sans text-sm ${plan.recommended ? "text-white/60" : "text-neutral-500"}`}>

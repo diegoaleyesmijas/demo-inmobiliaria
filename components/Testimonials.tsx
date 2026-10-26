@@ -17,11 +17,11 @@ export default function Testimonials() {
   const testimonial = testimonials[currentIndex];
 
   return (
-    <section className="py-32 md:py-40 bg-white relative overflow-hidden">
+    <section className="py-20 md:py-32 lg:py-40 bg-white relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent-500/[0.02] rounded-full blur-[100px]" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,14 +32,14 @@ export default function Testimonials() {
           <span className="inline-block px-3 py-1 rounded-full bg-primary-500/10 text-primary-600 text-[10px] font-medium uppercase tracking-[0.2em] mb-6">
             Testimonios
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-900 mb-6 leading-[1.1] text-balance">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-900 mb-6 leading-[1.1] text-balance">
             Lo que dicen{" "}
             <span className="italic text-accent-500">nuestros propietarios</span>
           </h2>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative min-h-[320px]">
+          <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -47,11 +47,10 @@ export default function Testimonials() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-                className="absolute inset-0"
               >
-                <div className="bg-neutral-50 rounded-[2rem] p-10 md:p-14 relative">
+                <div className="bg-neutral-50 rounded-[1.5rem] sm:rounded-[2rem] p-6 sm:p-10 md:p-14 relative">
                   {/* Large quote mark */}
-                  <div className="absolute top-8 left-10 font-heading text-8xl text-primary-500/10 leading-none select-none">
+                  <div className="absolute top-4 left-4 sm:top-8 sm:left-10 font-heading text-6xl sm:text-8xl text-primary-500/10 leading-none select-none">
                     &ldquo;
                   </div>
 
@@ -64,7 +63,7 @@ export default function Testimonials() {
                       ))}
                     </div>
 
-                    <p className="font-heading text-2xl md:text-3xl text-primary-900 italic leading-relaxed mb-10 text-pretty">
+                    <p className="font-heading text-xl sm:text-2xl md:text-3xl text-primary-900 italic leading-relaxed mb-8 sm:mb-10 text-pretty">
                       {testimonial.text}
                     </p>
 

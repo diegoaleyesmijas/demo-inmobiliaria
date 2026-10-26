@@ -61,12 +61,12 @@ export default function Calculator() {
   };
 
   return (
-    <section id="calculadora" className="py-32 md:py-40 bg-primary-900 relative overflow-hidden">
+    <section id="calculadora" className="py-20 md:py-32 lg:py-40 bg-primary-900 relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent-500/10 rounded-full blur-[100px]" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ export default function Calculator() {
           <span className="inline-block px-3 py-1 rounded-full bg-white/10 text-white/80 text-[10px] font-medium uppercase tracking-[0.2em] mb-6 border border-white/10">
             Calculadora
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-[1.1] text-balance">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-[1.1] text-balance">
             ¿Cuánto podés ganar{" "}
             <span className="italic text-accent-400">con tu propiedad?</span>
           </h2>
@@ -95,7 +95,7 @@ export default function Calculator() {
           className="max-w-2xl mx-auto"
         >
           <div className="bezel-outer" style={{ background: "rgba(255,255,255,0.05)", borderColor: "rgba(255,255,255,0.08)" }}>
-            <div className="bezel-inner bg-white rounded-[calc(2rem-6px)] p-8 md:p-12">
+            <div className="bezel-inner bg-white rounded-[calc(2rem-6px)] p-5 sm:p-8 md:p-12">
               {/* Progress */}
               <div className="flex items-center justify-center gap-3 mb-10">
                 <div className={`w-2.5 h-2.5 rounded-full transition-all duration-500 ${step >= 1 ? "bg-primary-500" : "bg-neutral-200"}`} />
@@ -103,7 +103,7 @@ export default function Calculator() {
                 <div className={`w-2.5 h-2.5 rounded-full transition-all duration-500 ${step >= 2 ? "bg-primary-500" : "bg-neutral-200"}`} />
               </div>
 
-              <div className="min-h-[420px]">
+              <div className="min-h-0 sm:min-h-[420px]">
                 <AnimatePresence mode="wait">
                   {step === 1 && (
                     <motion.div
@@ -139,7 +139,7 @@ export default function Calculator() {
                         <label className="font-sans text-sm font-medium text-neutral-700 mb-2 block">
                           Ambientes
                         </label>
-                        <div className="grid grid-cols-4 gap-3">
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                           {["1", "2", "3", "4+"].map((num) => (
                             <button
                               key={num}
@@ -301,7 +301,7 @@ export default function Calculator() {
                         </motion.div>
                       )}
 
-                      <div className="flex gap-3 pt-2">
+                      <div className="flex flex-col sm:flex-row gap-3 pt-2">
                         <button
                           onClick={() => setStep(1)}
                           className="flex-1 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 font-medium py-4 rounded-full transition-all duration-300"
